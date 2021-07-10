@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Download') {
+            steps {
+                git credentialsId: 'github-ssh-key', url: 'git@github.com:spacenear/web-development-quiz.git/'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'npm install'
+                sh 'npm cache clear --force'
+                sh 'npm run build'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'cp -r -f ./ /var/www/spacenear/data/www/web-developer-quiz.eclipseweb.ru'
+            }
+        }
+    }
+}
