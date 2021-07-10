@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Download') {
             steps {
-                git credentialsId: 'github-ssh-key', url: 'git@github.com:spacenear/web-development-quiz.git'
+                git credentialsId: 'github-ssh-key', url: 'git@github.com:spacenear/web-developer-self-check.git'
             }
         }
         stage('Build') {
@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'cp -r -f ./ /var/www/spacenear/data/www/web-developer-quiz.eclipseweb.ru'
+                sh 'cp -r -f ./ /var/www/spacenear/data/www/web-developer-self-check.eclipseweb.ru'
             }
         }
     }
