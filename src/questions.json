@@ -99,5 +99,14 @@
       { "type": "link", "content": "" },
       { "type": "image", "content": "" }
     ]
+  },
+  {
+    "title": "Для чего нужно ключевое слово new? 2",
+    "image": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
   }
 ]
