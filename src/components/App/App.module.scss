@@ -1,0 +1,166 @@
+@import './../../assets/scss/variables';
+@import './../../assets/scss/mixins';
+
+.app {
+  @include flex();
+
+  position: relative;
+
+  height: var(--app-height);
+
+  background-color: #ffffff;
+
+  .appInnerWrapper {
+    overflow: auto;
+
+    width: 100%;
+    max-height: 100%;
+    margin: auto;
+    padding: 80px 20px;
+
+    .titleWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .title {
+        @include width(600px);
+
+        font-size: 30px;
+
+        text-align: center;
+
+        color: #151515;
+      }
+
+      .answer {
+        @include width(800px);
+
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 20px;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 15px;
+
+          font-size: 16px;
+          line-height: 20px;
+
+          text-align: center;
+
+          color: #272727;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        img {
+          width: 100%;
+          max-width: 100%;
+          margin-bottom: 15px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        a {
+          display: inline-block;
+
+          margin: 0 auto;
+          margin-bottom: 15px;
+
+          font-size: 16px;
+          line-height: 20px;
+
+          transition: color .2s, border-color .2s;
+          text-decoration: none;
+
+          color: #272727;
+          border-bottom: 1px dotted currentColor;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &:hover {
+            color: $primary;
+          }
+
+          &:active {
+            color: darken($primary, 4%);
+          }
+        }
+      }
+    }
+  }
+
+  .buttons {
+    @include flex();
+
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+
+    padding: 5px 15px;
+
+    .button {
+      @include flex();
+
+      width: 40px;
+      height: 40px;
+      margin: 10px;
+
+      font-size: 16px;
+
+      transition: background-color .2s;
+
+      color: #ffffff;
+      border-radius: 50%;
+      background-color: $primary;
+
+      &:hover {
+        cursor: pointer;
+
+        background-color: darken($primary, 4%);
+      }
+
+      &:active {
+        cursor: pointer;
+
+        background-color: darken($primary, 7%);
+      }
+    }
+  }
+
+  .counter {
+    @include flex();
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 80px;
+
+    font-size: 40px;
+    line-height: 40px;
+
+    color: rgba(0, 0, 0, .05);
+
+    .current {
+      width: 100px;
+      margin-right: 10px;
+
+      text-align: right;
+    }
+
+    .total {
+      width: 100px;
+      margin-left: 10px;
+    }
+  }
+}

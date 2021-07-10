@@ -1,0 +1,79 @@
+@mixin bg-image($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+@mixin flex($x: c, $y: c) {
+  display: flex;
+
+  @if $x == c {
+    justify-content: center
+  } @else if $x == fs {
+    justify-content: flex-start
+  } @else if $x == fe {
+    justify-content: flex-end
+  } @else if $x == sa {
+    justify-content: space-around
+  } @else if $x == sb {
+    justify-content: space-between
+  } @else if $x == se {
+    justify-content: space-evenly
+  } @else {
+    justify-content: $x;
+  }
+
+  @if $y == c {
+    align-items: center
+  } @else if $y == fs {
+    align-items: flex-start
+  } @else if $y == fe {
+    align-items: flex-end
+  } @else if $y == st {
+    align-items: stretch
+  } @else {
+    align-items: $y;
+  }
+}
+
+@mixin width($width, $top: 0, $bottom: 0) {
+  width: 100%;
+  max-width: $width;
+  margin: $top auto $bottom auto;
+}
+
+@mixin absolute() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin elevation($n: 4, $color: #000) {
+  @if $n > 4 {
+    $n: 4;
+  } @else if $n < 1 {
+    $n: 1;
+  }
+
+  @if $n == 1 {
+    box-shadow: 0 2px 1px -1px transparentize($color, .8),
+                0 1px 1px 0 transparentize($color, .86),
+                0 1px 3px 0 transparentize($color, .88);
+  } @else if $n == 2 {
+    box-shadow: 0 2px 4px -1px transparentize($color, .8),
+                0 4px 5px 0 transparentize($color, .86),
+                0 1px 10px 0 transparentize($color, .88);
+  } @else if $n == 3 {
+    box-shadow: 0 5px 5px -3px transparentize($color, .8),
+                0 8px 10px 1px transparentize($color, .86),
+                0 3px 14px 2px transparentize($color, .88);
+  } @else if $n == 4 {
+    box-shadow: 0 7px 8px -4px transparentize($color, .8),
+                0 12px 17px 2px transparentize($color, .86),
+                0 5px 22px 4px transparentize($color, .88);
+
+  }
+}

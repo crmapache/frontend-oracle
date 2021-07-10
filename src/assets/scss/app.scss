@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap&subset=cyrillic-ext');
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import "variables";
+@import "mixins";
+
+body {
+  margin: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  color: $primary-font-color;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
