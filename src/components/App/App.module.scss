@@ -48,7 +48,7 @@
         display: flex;
         flex-direction: column;
 
-        margin-top: 20px;
+        margin-top: 40px;
 
         p {
           margin-top: 0;
@@ -71,6 +71,7 @@
 
           width: 100%;
           margin-bottom: 15px;
+          border-radius: 4px;
 
           &:last-child {
             margin-bottom: 0;
@@ -86,7 +87,7 @@
           font-size: 16px;
           line-height: 20px;
 
-          transition: color .2s, border-color .2s;
+          transition: color 0.2s, border-color 0.2s;
           text-decoration: none;
 
           color: #272727;
@@ -104,6 +105,48 @@
             color: darken($primary, 4%);
           }
         }
+      }
+    }
+  }
+
+  .filtersWrap {
+    @include flex();
+    @include elevation(3);
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 75px;
+    left: 20px;
+
+    border-radius: 4px;
+    background-color: #ffffff;
+
+    .filterButton {
+      margin: 5px;
+      padding: 10px 15px;
+
+      font-size: 16px;
+
+      user-select: none;
+      transition: background-color 0.2s;
+
+      color: #ffffff;
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.7);
+
+      &:hover {
+        cursor: pointer;
+
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      &:active {
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+
+      &.active {
+        background-color: $primary;
       }
     }
   }
@@ -127,22 +170,39 @@
 
       font-size: 16px;
 
-      transition: background-color .2s;
+      user-select: none;
+      transition: background-color 0.2s;
 
       color: #ffffff;
       border-radius: 50%;
-      background-color: $primary;
+      background-color: rgba(0, 0, 0, 0.7);
 
       &:hover {
         cursor: pointer;
 
-        background-color: darken($primary, 4%);
+        background-color: rgba(0, 0, 0, 0.8);
       }
 
       &:active {
-        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.9);
+      }
 
-        background-color: darken($primary, 7%);
+      &.filtersActive {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          top: 9px;
+          right: 7px;
+
+          width: 8px;
+          height: 8px;
+
+          content: '';
+
+          border-radius: 4px;
+          background-color: $primary;
+        }
       }
     }
   }
@@ -160,7 +220,7 @@
     font-size: 40px;
     line-height: 40px;
 
-    color: rgba(0, 0, 0, .05);
+    color: rgba(0, 0, 0, 0.05);
 
     .current {
       width: 100px;
