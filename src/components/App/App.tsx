@@ -45,11 +45,19 @@ function App() {
       <div className={styles.appInnerWrapper}>
         <div className={styles.titleWrapper}>
           <div className={styles.title}>{questions[activeQuestionIndex].title}</div>
+          {questions[activeQuestionIndex].image && (
+            <img
+              className={styles.questionImage}
+              src={require(`./../../assets/images/${questions[activeQuestionIndex].image}`).default}
+              alt=""
+              draggable={false}
+            />
+          )}
           {isAnswerOpen && (
             <div className={styles.answer}>
               {questions[activeQuestionIndex].data.map(
                 (el: { type: string; content: string }, i: number) => {
-                  if (el.type === 'image') {
+                  if (el.content && el.type === 'image') {
                     return (
                       <img
                         src={require(`./../../assets/images/${el.content}`).default}
@@ -60,11 +68,7 @@ function App() {
                     );
                   }
 
-                  if (el.type === 'code') {
-                    return <p key={i}>{el.content}</p>;
-                  }
-
-                  if (el.type === 'link') {
+                  if (el.content && el.type === 'link') {
                     return (
                       <a
                         href={el.content}

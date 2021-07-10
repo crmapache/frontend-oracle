@@ -33,6 +33,15 @@
         color: #151515;
       }
 
+      .questionImage {
+        @include width(700px);
+        @include elevation(3);
+
+        margin-top: 15px;
+
+        border-radius: 4px;
+      }
+
       .answer {
         @include width(800px);
 
@@ -58,8 +67,9 @@
         }
 
         img {
+          @include elevation(3);
+
           width: 100%;
-          max-width: 100%;
           margin-bottom: 15px;
 
           &:last-child {

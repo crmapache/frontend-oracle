@@ -1,6 +1,7 @@
 [
   {
     "title": "",
+    "image": "",
     "data": [
       { "type": "text", "content": "" },
       { "type": "link", "content": "" },
@@ -17,7 +18,7 @@
       { "type": "text", "content": "Переменные var могут быть объявлены повторно." },
       {
         "type": "text",
-        "content": "Поднятие var. Поднятие - механизм в JavaScript, по которому переменные и объявления функций перемещаются в верхнюю часть своей области видимости, прежде чем начнется выполнение кода. Обращение к переменной var до ее объявления вернет undefined, а обращение в переменной let или const до их объявления вызовет ReferenceError."
+        "content": "Поднятие var. Поднятие - механизм в JavaScript, по которому переменные и объявления функций перемещаются в верхнюю часть своей области видимости, прежде чем начнется выполнение кода. Обращение к переменной var до ее объявления вернет undefined, а обращение к переменной let или const до их объявления вызовет ReferenceError."
       },
       { "type": "text", "content": "Переменная let имеет блочную область видимости." },
       {
@@ -25,6 +26,78 @@
         "content": "Переменные let могут быть обновлены, но не объявлены повторно."
       },
       { "type": "text", "content": "Константы const аналогичны let, но их нельзя обновлять." }
+    ]
+  },
+  {
+    "title": "Что такое констекст в JavaScript?",
+    "image": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "Чем тип number отличается от bigint?",
+    "image": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "Напишите функцию каррирования.",
+    "image": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "Напишите функция вида sum(a)(b)(c) которая суммирует числа.",
+    "image": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "Какие вы знаете HTTP заголовки?",
+    "image": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "Какая разница в подключении скриптов async, defer?",
+    "image": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "Какие есть типы данных в JavaScript?",
+    "image": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "Для чего нужно ключевое слово new?",
+    "image": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
     ]
   }
 ]
