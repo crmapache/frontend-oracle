@@ -123,8 +123,8 @@ function App() {
           {isAnswerOpen && (
             <div className={styles.answer}>
               {questions[activeQuestionIndex].data.map(
-                (el: { type: string; content: string }, i: number) => {
-                  if (el.content && el.type === 'image') {
+                (el: { type: string; content: string | string[] }, i: number) => {
+                  if (el.content && typeof el.content === 'string' && el.type === 'image') {
                     return (
                       <img
                         src={require(`./../../assets/images/${el.content}`).default}
@@ -135,7 +135,7 @@ function App() {
                     );
                   }
 
-                  if (el.content && el.type === 'link') {
+                  if (el.content && typeof el.content === 'string' && el.type === 'link') {
                     return (
                       <a
                         href={el.content}
@@ -146,6 +146,20 @@ function App() {
                       >
                         {el.content}
                       </a>
+                    );
+                  }
+
+                  if (el.content && Array.isArray(el.content) && el.type === 'list') {
+                    return (
+                      <div className={styles.list} key={i}>
+                        {el.content.map((listEl, listElIndex) => {
+                          return (
+                            <div className={styles.listItem} key={listElIndex}>
+                              {listEl}
+                            </div>
+                          );
+                        })}
+                      </div>
                     );
                   }
 
