@@ -8,12 +8,14 @@
     @include flex(fs, st);
 
     .title {
+      position: relative;
+
       padding: 12px 20px;
 
       font-size: 20px;
 
       user-select: none;
-      transition: background-color .2s;
+      transition: background-color 0.2s;
 
       color: $color-text-primary;
       border-radius: 4px;
@@ -30,6 +32,37 @@
       &:active {
         background-color: lighten(#272c37, 10%);
       }
+
+      &:before {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+
+        width: 4px;
+        height: calc(100% - 10px);
+
+        content: '';
+
+        border-radius: 4px;
+      }
+
+      &.typeMechanism {
+        &:before {
+          background-color: #ffc107;
+        }
+      }
+
+      &.typeTask {
+        &:before {
+          background-color: #ff5722;
+        }
+      }
+
+      &.typeBasic {
+        &:before {
+          background-color: #8bc34a;
+        }
+      }
     }
 
     .imageButton {
@@ -39,9 +72,9 @@
       margin-left: 15px;
 
       user-select: none;
-      transition: background-color .2s;
+      transition: background-color 0.2s;
 
-      opacity: .3;
+      opacity: 0.3;
       color: $color-text-primary;
       border-radius: 4px;
       background-color: #272c37;
@@ -112,7 +145,7 @@
       font-size: 18px;
       line-height: 20px;
 
-      transition: color .2s;
+      transition: color 0.2s;
       text-align: center;
 
       color: $color-text-secondary;
@@ -138,9 +171,11 @@
       }
 
       .listItem {
-        font-size: 18px;
-        color: $color-text-secondary;
         margin-bottom: 8px;
+
+        font-size: 18px;
+
+        color: $color-text-secondary;
 
         &:last-child {
           margin-bottom: 0;

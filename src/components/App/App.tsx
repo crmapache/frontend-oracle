@@ -9,7 +9,7 @@ import data from './../../questions.json';
 
 const questionsData = shuffle(data.slice(1));
 const fuse = new Fuse(questionsData, {
-  keys: ['title', 'tags'],
+  keys: ['title', 'data'],
   findAllMatches: true,
 });
 
@@ -28,7 +28,7 @@ export default function App() {
       </div>
       <div className={styles.questionsWrap}>
         {questions.length > 0 ? (
-          questions.map((question, i) => <Question question={question} key={i} />)
+          questions.map((question, i) => <Question question={question} type={question.type} key={i} />)
         ) : (
           <div className={styles.emptyRequiestMessage}>( ‾́ ◡ ‾́ )</div>
         )}

@@ -1,13 +1,15 @@
 import React, { useState, MouseEventHandler, useEffect } from 'react';
+import upperFirst from 'lodash/upperFirst';
 
 import cn from 'classnames';
 import styles from './Question.module.scss';
 
 interface Props {
   question: any;
+  type: string;
 }
 
-export default function Question({ question }: Props) {
+export default function Question({ question, type }: Props) {
   const [isImageOpen, setIsImageOpen] = useState(false);
   const [isAnswerOpen, setIsAnswerOpen] = useState(false);
 
@@ -19,7 +21,10 @@ export default function Question({ question }: Props) {
   return (
     <div className={styles.question}>
       <div className={styles.head}>
-        <div className={styles.title} onClick={() => setIsAnswerOpen(!isAnswerOpen)}>
+        <div
+          className={cn(styles.title, styles[`type${upperFirst(type)}`])}
+          onClick={() => setIsAnswerOpen(!isAnswerOpen)}
+        >
           {question.title}
         </div>
         <div

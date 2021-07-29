@@ -1,13 +1,8 @@
 /**
- * Тротлинг
- * Дебоунс
  * Как определяется сложность алгоритмов?
- * Что такое стек вызова?
- * Что такое область видимости ( scope )?
- * Что такое лексическое окружение ( Lexical Environment )?
+ * ScopeChain https://habr.com/ru/post/468943/
  * Какие основыне принципы ООП вы знаете?
  * Что вы знаете о принципах SOLID?
- * Что такое чистые функции ( Pure Function ) в JavaScript? https://habr.com/ru/post/437512/
  * Что такое замыкание в в JavaScript?
  * Что такое Web Workers и как они работают?
  * Какие client-side хранилища вы знаете? https://developer.mozilla.org/ru/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage
@@ -21,8 +16,36 @@
  * Расскажите про паттерн Dependency Injection
  */
 
-function test(s, t) {
-
-}
+function test(s, t) {}
 
 console.log(test('anagram', 'nagaram'));
+
+function throttle(func, ms) {
+  
+  let isThrottled = false,
+    savedArgs,
+    savedThis;
+  
+  function wrapper() {
+    
+    if (isThrottled) { // (2)
+      savedArgs = arguments;
+      savedThis = this;
+      return;
+    }
+    
+    func.apply(this, arguments); // (1)
+    
+    isThrottled = true;
+    
+    setTimeout(function() {
+      isThrottled = false; // (3)
+      if (savedArgs) {
+        wrapper.apply(savedThis, savedArgs);
+        savedArgs = savedThis = null;
+      }
+    }, ms);
+  }
+  
+  return wrapper;
+}
