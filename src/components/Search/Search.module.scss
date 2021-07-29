@@ -1,0 +1,25 @@
+@import './../../assets/scss/variables';
+@import './../../assets/scss/mixins';
+
+.search {
+  width: 100%;
+  padding: 8px 15px;
+
+  font-size: 16px;
+
+  transition: border-color .2s;
+
+  color: $color-text-primary;
+  border: 1px solid #3e3e3e;
+  border-radius: 4px;
+  outline: none;
+  background-color: #070a10;
+
+  &:hover {
+    border-color: lighten(#3e3e3e, 10%);
+  }
+
+  &:focus {
+    border-color: lighten(#3e3e3e, 20%);
+  }
+}

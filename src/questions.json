@@ -2,7 +2,7 @@
   {
     "title": "",
     "image": "",
-    "tags": ["", ""],
+    "tags": [],
     "data": [
       { "type": "text", "content": "" },
       { "type": "link", "content": "" },
@@ -11,7 +11,7 @@
   },
   {
     "title": "В чем разница между let, var и const?",
-    "tags": ["JavaScript"],
+    "tags": [],
     "data": [
       {
         "type": "text",
@@ -32,7 +32,7 @@
   },
   {
     "title": "Чем тип number отличается от bigint?",
-    "tags": ["JavaScript"],
+    "tags": [],
     "data": [
       {
         "type": "text",
@@ -48,7 +48,7 @@
   },
   {
     "title": "Почему 0.1 + 0.2 в JavaScript не равно 0.3?",
-    "tags": ["JavaScript"],
+    "tags": [],
     "data": [
       {
         "type": "text",
@@ -67,7 +67,7 @@
   },
   {
     "title": "Какие есть типы данных в JavaScript?",
-    "tags": ["JavaScript"],
+    "tags": [],
     "data": [
       {
         "type": "text",
@@ -100,7 +100,7 @@
   },
   {
     "title": "Какая разница в подключении скриптов async, defer?",
-    "tags": ["JavaScript"],
+    "tags": [],
     "data": [
       {
         "type": "text",
@@ -122,7 +122,7 @@
   },
   {
     "title": "Для чего нужно ключевое слово new?",
-    "tags": ["JavaScript"],
+    "tags": ["new"],
     "data": [
       { "type": "text", "content": "Применяется для вызова функции конструктора." },
       {
@@ -137,7 +137,7 @@
   },
   {
     "title": "Какие вы знаете HTTP заголовки?",
-    "tags": ["Other"],
+    "tags": [],
     "data": [
       {
         "type": "text",
@@ -172,8 +172,8 @@
   },
   {
     "title": "Напишите функцию которая принимает функцию, каррирует ее и возвращает другую функцию.",
-    "tags": ["JavaScript", "Task"],
     "image": "7jc57l44vy.jpg",
+    "tags": [],
     "data": [
       {
         "type": "text",
@@ -184,12 +184,12 @@
   },
   {
     "title": "Напишите функцию которая суммирует числа и вызывается в таком виде: sum(a)(b, c, d)(e, f)(g)...(z)().",
-    "tags": ["JavaScript", "Task"],
+    "tags": [],
     "data": [{ "type": "image", "content": "4gxvi4sfvp.jpg" }]
   },
   {
     "title": "Чем отличается императивный стиль программирования от декларативного?",
-    "tags": ["JavaScript"],
+    "tags": [],
     "data": [
       {
         "type": "text",
@@ -211,7 +211,7 @@
   },
   {
     "title": "Чем отличается ООП стиль программирования от функционального?",
-    "tags": ["JavaScript"],
+    "tags": [],
     "data": [
       {
         "type": "text",
@@ -258,7 +258,7 @@
   },
   {
     "title": "Что такое констекст в JavaScript?",
-    "tags": ["JavaScript"],
+    "tags": [],
     "data": [
       {
         "type": "text",

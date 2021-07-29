@@ -1,0 +1,151 @@
+@import './../../assets/scss/variables';
+@import './../../assets/scss/mixins';
+
+.question {
+  margin-bottom: 15px;
+
+  .head {
+    @include flex(fs, st);
+
+    .title {
+      padding: 12px 20px;
+
+      font-size: 20px;
+
+      user-select: none;
+      transition: background-color .2s;
+
+      color: $color-text-primary;
+      border-radius: 4px;
+      background-color: #272c37;
+
+      flex: 1 1 0;
+
+      &:hover {
+        cursor: pointer;
+
+        background-color: lighten(#272c37, 5%);
+      }
+
+      &:active {
+        background-color: lighten(#272c37, 10%);
+      }
+    }
+
+    .imageButton {
+      @include flex();
+
+      width: 40px;
+      margin-left: 15px;
+
+      user-select: none;
+      transition: background-color .2s;
+
+      opacity: .3;
+      color: $color-text-primary;
+      border-radius: 4px;
+      background-color: #272c37;
+
+      &.active {
+        opacity: 1;
+
+        &:hover {
+          cursor: pointer;
+
+          background-color: lighten(#272c37, 5%);
+        }
+
+        &:active {
+          background-color: lighten(#272c37, 10%);
+        }
+      }
+    }
+  }
+
+  .imageWrap {
+    margin-top: 10px;
+    padding: 0 20px;
+    .questionImage {
+      @include width(500px);
+
+      border-radius: 4px;
+    }
+  }
+
+  .answerWrap {
+    margin-top: 10px;
+    padding: 0 65px 0 20px;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 15px;
+
+      font-size: 18px;
+      line-height: 20px;
+
+      color: $color-text-secondary;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    img {
+      @include elevation(3);
+
+      width: 100%;
+      margin-bottom: 15px;
+
+      border-radius: 4px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      display: inline-block;
+
+      margin: 0 auto;
+      margin-bottom: 15px;
+
+      font-size: 18px;
+      line-height: 20px;
+
+      transition: color .2s;
+      text-align: center;
+
+      color: $color-text-secondary;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        color: $primary;
+      }
+
+      &:active {
+        color: darken($primary, 4%);
+      }
+    }
+
+    .list {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .listItem {
+        font-size: 18px;
+        color: $color-text-secondary;
+        margin-bottom: 8px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
