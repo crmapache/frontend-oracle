@@ -24,7 +24,7 @@ export default function App() {
   return (
     <div className={styles.app}>
       <div className={styles.searchWrap}>
-        <Search onChange={value => setFilter(value)} />
+        <Search onChange={value => setFilter(value)} questionsLength={questionsData.length}/>
       </div>
       <div className={styles.questionsWrap}>
         {questions.length > 0 ? (

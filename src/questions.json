@@ -173,7 +173,6 @@
   },
   {
     "title": "Напишите декоратор который каррирует функцию.",
-    "image": "",
     "type": "task",
     "data": [
       {
@@ -295,7 +294,6 @@
   },
   {
     "title": "Создайте «тормозящий» throttle декоратор.",
-    "image": "",
     "type": "task",
     "data": [
       {
@@ -307,8 +305,7 @@
   },
   {
     "title": "Что такое чистые функции ( Pure Function ) в JavaScript?",
-    "image": "patterns",
-    "type": "",
+    "type": "patterns",
     "data": [
       {
         "type": "text",
@@ -328,7 +325,6 @@
   },
   {
     "title": "Что такое лексическое окружение ( Lexical Environment )?",
-    "image": "",
     "type": "mechanism",
     "data": [
       {
@@ -351,7 +347,6 @@
   },
   {
     "title": "Что такое стек вызова ( Call Stack )?",
-    "image": "",
     "type": "mechanism",
     "data": [
       {
@@ -372,7 +367,6 @@
   },
   {
     "title": "Что такое область видимости ( Scope )?",
-    "image": "",
     "type": "mechanism",
     "data": [
       { "type": "text", "content": "Область видимости — это зона доступности переменных." },
@@ -403,6 +397,181 @@
         "content": "Очевидно, что область видимости изолирует переменные. Благодаря этому разные области видимости могут содержать переменные с одинаковыми именами."
       },
       { "type": "link", "content": "https://habr.com/ru/post/517338/" }
+    ]
+  },
+
+  {
+    "title": "Что вы знаете о «Big O notation» ?",
+    "image": "",
+    "type": "",
+    "data": [
+      {
+        "type": "text",
+        "content": "Нотация «О» большое используется для выражения скорости алгоритма."
+      },
+      { "type": "text", "content": "Big-O может оценивать скорость роста времени затрачиваемого на выполнение алгоритма, а может оценивать скорость роста затрачиваемого объема памяти." },
+      {
+        "type": "text",
+        "content": "Вот пять вариантов «О» большого, которые встречаются чаще всего. Они отсортированы от самого быстрого к самому медленному:"
+      },
+      {
+        "type": "list",
+        "content": [
+          "O(log n) — логарифмическое время. Пример: бинарный поиск.",
+          "O(n) — линейное время. Пример: простой поиск.",
+          "O(n * log n). Пример: быстрый алгоритм сортировки, такой как quicksort ( быстрая сортировка ).",
+          "O(n2) — квадратичное время. Пример: медленный алгоритм сортировки, такой как сортировка выбором.",
+          "O(n!) — факториальное время. Пример: очень медленный алгоритм, такой как в задаче коммивояжера."
+        ]
+      },
+      {
+        "type": "text",
+        "content": "«О» большое можно подвергать сокращению отбрасывая константы и несущественные части. К примеру O(2n) = O(n) и тд. Потому что если представить что n = Infinity то нет разницы 2n или просто n."
+      },
+      { "type": "text", "content": "«О» большое описывает количество операций при наихудшем сценарии." },
+      { "type": "text", "content": "Big-O просто сравнивает сложность программ, которая показывает, насколько быстро они растут, когда увеличиваются входные данные, а не точное время, затрачиваемое на выполнение действия." },
+      { "type": "link", "content": "https://www.youtube.com/watch?v=Fu4BzQNN0Qs" },
+      { "type": "image", "content": "1627593812.jpg" }
+    ]
+  },
+  {
+    "title": "",
+    "image": "",
+    "type": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "",
+    "image": "",
+    "type": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "",
+    "image": "",
+    "type": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "",
+    "image": "",
+    "type": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "",
+    "image": "",
+    "type": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "",
+    "image": "",
+    "type": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "",
+    "image": "",
+    "type": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "",
+    "image": "",
+    "type": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "",
+    "image": "",
+    "type": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "",
+    "image": "",
+    "type": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "",
+    "image": "",
+    "type": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "",
+    "image": "",
+    "type": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "",
+    "image": "",
+    "type": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
+    ]
+  },
+  {
+    "title": "",
+    "image": "",
+    "type": "",
+    "data": [
+      { "type": "text", "content": "" },
+      { "type": "link", "content": "" },
+      { "type": "image", "content": "" }
     ]
   }
 ]
